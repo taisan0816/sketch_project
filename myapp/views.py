@@ -1,7 +1,9 @@
 from django.shortcuts import render,redirect
+from django.http.response import JsonResponse
 
 from django.views import View
 from .models import Topic
+from .forms import TopicForm
 
 class DrawView(View):
 
@@ -14,9 +16,17 @@ class DrawView(View):
 
     def post(self, request, *args, **kwargs):
 
-        posted  = Topic( comment = request.POST["comment"] )
-        posted.save()
+        json    = { "error":True }
 
-        return redirect("myapp:draw")
+        form    = TopicForm(request.POST,request.FILES)
+
+        if form.is_valid():
+            print("OK")
+            json["error"]   = False
+            form.save()
+        else:
+            print("NG")
+
+        return JsonResponse(json)
 
 draw   = DrawView.as_view()

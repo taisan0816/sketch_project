@@ -1,26 +1,40 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>簡易掲示板</title>
+	<title>簡易掲示板</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+    <script src="{% static 'myapp/js/script.js' %}"></script>
+
+    <script src="{% static 'myapp/js/draw.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'myapp/css/style.css' %}">
 </head>
 <body>
 
+    <h1 class="bg-primary text-white text-center">お絵かき掲示板</h1>
+
     <main class="container">
-        {# ここが投稿用フォーム #}
-        <form method="POST">
+        <form id="form_area" action="{% url 'myapp:draw' %}" method="POST">
             {% csrf_token %}
             <textarea class="form-control" name="comment"></textarea>
-            <input type="submit" value="送信">
+            <div class="my-2">
+                <canvas id="canvas" class="canvas" width="300px" height="300px"></canvas>
+                <input id="canvas_clear" class="btn btn-danger" type="button" value="クリア">
+            </div>
+            <input id="submit" class="form-control" type="button" value="送信">
         </form>
 
-
-        {# ここが投稿されたデータの表示領域 #}
         {% for topic in topics %}
         <div class="border">
-            {{ topic.comment }}
+            <div>{{ topic.comment }}</div>
+            {% if topic.img %}
+                <div><img src="{{ topic.img.url }}" alt="投稿画像"></div>
+            {% endif %}
         </div>
         {% endfor %}
     </main>
