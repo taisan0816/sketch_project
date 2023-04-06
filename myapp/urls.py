@@ -3,5 +3,7 @@ from . import views
 
 app_name    = "myapp"
 urlpatterns = [
-    path('', views.draw, name="draw"),
+    path('draw', views.draw, name="draw"),
+    path('',views.drawVue, name="drawVue"),
+    path('index', views.index , name="index"),
 ]

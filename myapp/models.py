@@ -10,3 +10,7 @@ class Topic(models.Model):
 
     def __str__(self):
         return self.comment
+    
+class Index(models.Model):
+    image = models.ImageField(upload_to='img/')
+    created_at = models.DateTimeField(auto_now_add=True)

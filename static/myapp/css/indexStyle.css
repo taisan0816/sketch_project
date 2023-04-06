@@ -1,0 +1,99 @@
+html{
+    height: 100vh;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+    overflow: auto;
+    background-size: cover;
+}
+
+.bg-home{
+    background-image: url('../../../media/background/25359226_s.jpg');
+    background-size: cover;
+    min-height: 93vh;
+}
+
+.bg-art-book-title{
+    background-image:url('../image/25359226_s.jpg');
+    background-size: cover;
+    width: 100vw;
+}
+
+.bg-profile{
+    background-image:url('../image/25359226_s.jpg');
+    background-size: cover;
+    height: 90vh;
+    width: 100vw;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+.font-title {
+    font-family: 'Caveat', cursive;
+}
+
+.font-rainbow{
+    background: linear-gradient(to right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+	background: -webkit-linear-gradient(left, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+	background: -o-linear-gradient(right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+	background: -moz-linear-gradient(right, #f00 0%, #f80 14.28%, #dd0 28.56%, #0d0 42.85%, #0dd 57.14%, #00f 71.42%, #e0e 85.71%, #f00 100%) 0% center / 200% auto;
+	-webkit-background-clip: text;
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+	/*text-fill-color: transparent;*/
+}
+
+.form-signin {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+  }
+  
+.form-signin .checkbox {
+    font-weight: 400;
+ }
+  
+ .form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    margin: auto;
+ }
+
+.h-10{
+    height: 10vh;
+}
+
+.h-80p{
+    height: 80%;
+}
+
+.h-90{
+    height: 90vh;
+}
+
+.w-90{
+    width:90%;
+}
+
+.content {
+	/*width: 25%;*/
+    height: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+    background-color: rgb(245, 245, 236);
+    /*background-color: gray;*/
+    box-shadow: 4px 4px 2px #0f0202 ;
+	overflow: hidden;
+}
+
+.content-img {
+	width: 90%;
+    border: outset 10px rgb(134, 59, 21);
+}

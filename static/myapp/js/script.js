@@ -6,7 +6,7 @@ window.addEventListener("load" , function (){
 });
 
 function send(){
-
+    console.log("aaa")
     let form_elem   = "#form_area";
 
     let data    = new FormData( $(form_elem).get(0) );
@@ -55,5 +55,4 @@ function send(){
     }).fail( function(xhr, status, error) {
         console.log(status + ":" + error );
     });
-
 }
