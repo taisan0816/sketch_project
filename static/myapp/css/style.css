@@ -1,0 +1,107 @@
+html{
+    height: 100%;
+    width: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+canvas {
+    position: absolute;
+    z-index: 1;
+  }
+
+button {
+    z-index: 2;
+  }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.selected-draw-border{
+    border: 2px solid gray;
+    border-radius: 5px, 5px, 5px, 5px;
+}
+
+.selected-draw-border:hover{
+    border: 2px solid gray;
+    border-radius: 5px, 5px, 5px, 5px;
+}
+
+.selected-erase-border{
+    border: 2px solid gray;
+    border-radius: 5px, 5px, 5px, 5px;
+}
+    
+.selected-erase-border:hover{
+    border: 2px solid gray;
+    border-radius: 5px, 5px, 5px, 5px;
+}
+
+.entry-content{
+    border: outset 10px rgb(134, 59, 21);
+}
+
+.eraser-color{
+    color:navy;
+}
+
+.trash-color{
+    color:gray;
+}
+
+.bg-wood-image{
+    background-image: url('../../../media/background/25359226_s.jpg');
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+.font-title {
+    font-family: 'Caveat', cursive;
+}
+
+.h-10{
+    height: 10%;
+}
+
+.h-80{
+    height:80%;
+}
+
+.h-90{
+    height: 90%;
+}
+
+.red{
+    color: red;
+}
+.blue{
+    color: blue;
+}
+.green{
+    color: green;
+}
+.yellow{
+    color: yellow;
+}
+
+.bg-white{
+    background-color: white;
+}
+
+.bg-draw-left{
+    overflow-y: auto;
+    direction: rtl;
+}
+
+.reset-txt-direction {
+    direction: ltr;
+  }
+/*太さ*/
