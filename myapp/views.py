@@ -7,6 +7,8 @@ from .forms import TopicForm
 from .models import Index
 from .forms import IndexForm
 
+from django.contrib.auth.views import LoginView
+
 class DrawView(View):
 
     def get(self, request, *args, **kwargs):
@@ -70,6 +72,10 @@ class indexView(View):
 
     def get(self, request, *args, **kwargs):
         return render(request, 'myapp/index.html', {'form': IndexForm()})
+
+class drawingLoginView(LoginView):
+    fileds = "__all__"
+
 
 drawVue = DrawVueView.as_view()
 draw   = DrawView.as_view()
